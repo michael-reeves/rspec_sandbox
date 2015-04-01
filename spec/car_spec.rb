@@ -3,29 +3,30 @@ require "car"
 RSpec.describe "Car" do
 
 	describe "attributes" do
+
+		before(:example) do
+		  @car = Car.new
+		end
+
 		it "allows reading and writing for :make" do
 			pending("debugging a problem")
-			car = Car.new
-			car.make = 'Tes'
-			expect(car.make).to eq('Test')
+			@car.make = 'Tes'
+			expect(@car.make).to eq('Test')
 		end
 
 		it "allows reading and writing for :year" do
-			car = Car.new
-			car.year = 9999
-			expect(car.year).to eq(9999)
-			#car.year.should eq(9999) 	# deprecated syntax
+			@car.year = 9999
+			expect(@car.year).to eq(9999)
+			#@car.year.should eq(9999) 	# deprecated syntax
 		end
 
 		it "allows reading and writing for :color" do
-			car = Car.new
-			car.color = 'foo'
-			expect(car.color).to eq('foo')
+			@car.color = 'foo'
+			expect(@car.color).to eq('foo')
 		end
 
 		it "allows reading for :wheels" do
-			car = Car.new()
-			expect(car.wheels).to eq(4)
+			expect(@car.wheels).to eq(4)
 		end
 
 		it "allows writing for doors"   # omitting the do/end block makes this a
