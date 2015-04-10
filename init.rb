@@ -18,7 +18,7 @@ color = gets.chomp()
 print "Doors: "
 doors = gets.chomp()
 
-car = Car.new(:make => make, :year => year, :color => color, :doors = doors)
+car = Car.new(:make => make, :year => year, :color => color, :doors => doors)
 
 puts
 puts "I understand that you want to purchase: #{car.full_name}."
